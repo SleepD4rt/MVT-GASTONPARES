@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miembro de la familia</title>
+</head>
+<body>
+    <h1>El integrante creado es: {{ member.name }} {{ member.last_name }}</h1>d
+    <h3>edad: {{ member.age }}</h3>
+    {% if member.sex.upper  == "M" %}
+    <h3>sexo: Masculino  </h3>
+    {% elif member.sex.upper == "F" %}
+    <h3>sexo: Femenino  </h3>
+    {% endif %}
+    <h3>altura: {{ member.height }} Metros</h3>
+    <h3>La prefsión quee ejerce es: {{ member.profession }}</h3>
+</body>
+</html>
