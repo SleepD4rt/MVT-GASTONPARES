@@ -7,14 +7,15 @@
     <title>Miembro de la familia</title>
 </head>
 <body>
-    <h1>El integrante creado es: {{ member.name }} {{ member.last_name }}</h1>d
-    <h3>edad: {{ member.age }}</h3>
+    <h1>El miembro de la familia, creado es: {{ member.name }} {{ member.last_name }}</h1>
+    <h3>Su fecha de nacimiento es el: {{ member.birth_day }}</h3>
+    <h3>Tiene: {{ member.age }} Años</h3>
     {% if member.sex.upper  == "M" %}
-    <h3>sexo: Masculino  </h3>
+    <h3>Su sexo es: Masculino  </h3>
     {% elif member.sex.upper == "F" %}
-    <h3>sexo: Femenino  </h3>
+    <h3>Su sexo es: Femenino  </h3>
     {% endif %}
-    <h3>altura: {{ member.height }} Metros</h3>
-    <h3>La prefsión quee ejerce es: {{ member.profession }}</h3>
+    <h3>Su altura es de: {{ member.height }} Metros</h3>
+    <h3>La prefsión que ejerce es: {{ member.profession }}</h3>
 </body>
 </html>
