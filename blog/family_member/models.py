@@ -14,4 +14,4 @@ class Family_member(models.Model):
     birth_day = models.DateField()
 
     def __str__(self):
-        return f"- ({self.name} | {self.last_name} | fecha de nacimiento: {self.birth_day} | edad: {self.age} | sexo:{self.sex} | profesion: {self.profession} | {self.height}"
+        return f"- Nombre: {self.name} | Apellido: {self.last_name} | fecha de nacimiento: {self.birth_day} | edad: {self.age} | sexo:{self.sex} | altura: {self.height} | profesion: {self.profession} "
