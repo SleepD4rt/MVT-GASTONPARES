@@ -19,6 +19,7 @@ from family_member.views import create_family_member
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('home.urls')),
     path('create_family-member/<str:name>/<str:last_name>/<str:birth_day>/<str:sex>/<str:height>/<str:profession>',
         create_family_member),
     path("family_member/", include("family_member.urls")),

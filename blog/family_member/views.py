@@ -9,8 +9,8 @@ from family_member.models import Family_member
 def create_family_member(request, name: str, last_name: str, birth_day: str, sex: str, height: str, profession: str):
 
     template = loader.get_template("template_family-member.html")
-    age = calculate_age(birth_day)
-    print(age)
+    age, birth_day = calculate_age(birth_day)
+    
     family_member = Family_member(
         name=name, last_name=last_name, birth_day=birth_day, age=age, sex=sex, height=height, profession=profession
     )
@@ -34,10 +34,12 @@ def family_member(request):
 
 def calculate_age(birth_day: str) -> int:
     birth_day = datetime.strptime(birth_day, "%Y-%m-%d")
+    print(birth_day)
     delta_time = datetime.now() - birth_day
+    print(delta_time)
     days_by_year = 365.25
 
-    years=int(delta_time.days // days_by_year),
+    years=int(delta_time.days // days_by_year)
     # months=int((delta_time.days % days_by_year) // 30),
     # days=int((delta_time.days % days_by_year) % 30),
-    return years[0]
+    return years, birth_day
