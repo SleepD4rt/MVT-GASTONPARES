@@ -55,6 +55,7 @@ ROOT_URLCONF = 'blog.urls'
 
 TEMPLATES = [
     {
+        
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         #Ruta aniversal para los templates
         'DIRS': [os.path.join(BASE_DIR, 'templates')],
