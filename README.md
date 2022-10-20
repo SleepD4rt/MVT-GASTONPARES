@@ -15,9 +15,9 @@ Teniendo Django instalado y el sever en ejecución, dirigirse a la url del servi
 si se quiere agregar un miembro nuevo se debe utilizar el siguiente comando reemplazando el contenido dentro de <str:>
 ```bash
 (DEFAULT)
-127.0.0.1:8000:create_family_member/<str:name>/<str:last_name>/<str:birth_day>/<str:sex>/<str:height>/<str:profession>
+127.0.0.1:8000:create_family-member/<str:name>/<str:last_name>/<str:birth_day>/<str:sex>/<str:height>/<str:profession>
 
-Ejemplo:  127.0.0.1:8000:create_family_member/Gastón/Pares/2000-02-02/M/1,75/Programador
+Ejemplo:  127.0.0.1:8000:create_family-member/Gastón/Pares/2000-02-02/M/1,75/Programador
 ```
 
 Le faltaria setear el ambiente de desarrollo "venv" y para ejecutar el proyecto sin alterar otros.
